@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body {
+            background-color: rgb(232, 234, 242);
+            display: flex;
+            justify-content: center;
+
+        }
+        .a{
+            position: relative;
+            top:120px;
+            width: auto;
+            height: 450px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            display: flex;
+        }
+
+        .b{
+
+            height: 450px;
+            width: auto;
+            background-size: cover;
+            display: flex;
+
+        }
+        .c{
+            width: 300px;
+            height: 450px;
+            background-color: white;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-left: 0;
+
+        }
+        .d{
+            width: 250px;
+            height: 450px;
+
+        }
+        .d h1{
+            font-family: '宋体', sans-serif;
+            font-weight: 1000;
+            font-size: 23px;
+            margin-bottom: 35px;
+            margin-left: 10px;
+
+        ;
+
+        }
+        .e{
+            width: 230px;
+            margin: 20px 0;
+            outline: none;
+            border: 0;
+            padding: 10px;
+            border-bottom: 3px solid rgb(80, 80, 170);
+            font-weight: 900;
+            font-size: 16px;
+        }
+        .g{
+
+            margin-top: 20px;
+            bottom: 30px;
+            display: block;
+            width: 200px;
+            height: 60px;
+            font-weight: 700;
+            font-size: 16px;
+
+            color: #fff;
+            line-height: 50px;
+            border-radius: .25rem;
+            background-color: #343a40;
+            border-color: #343a40;
+            text-align: center;
+
+        }
+        button:active {
+            background-color: #7b7f83;
+        }
+        .pic{
+        }
+        .false{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="a">
+    <div class="b">
+
+        <img th:src="${url}" class="pic"/>
+        <div class="c">
+            <div class="d">
+                <h1>图书管理系统</h1>
+
+                <form method="post" action="index">
+                    <input type="text" class="e" placeholder="USER NAME" name="username">
+                    <input type="password" class="e" placeholder="PASSWORD" name="password">
+                    <p th:if="${isFalse}" class="false">用户名密码错误,请重新输入</p>
+                    <button href="#" class="g">登入</button>
+                </form>
+                <button onclick="window.location.href='/Library/register'" class="g">注册</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

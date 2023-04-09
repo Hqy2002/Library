@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .text-container {
+            border: 2px solid #886868;
+            padding: 10px;
+            width: 700px;
+            height: 400px;
+        }
+        input{
+            width: 500px;
+            height: 200px;
+
+        }
+        p{
+            white-space: pre-wrap;
+        }
+    </style>
+
+</head>
+<body>
+<form method="post" action="sql">
+  <input type="text"  placeholder="输入sql语句" name="sql">
+    <button type="submit">执行</button>
+    <div class="text-container">
+        <p th:text=" ${result}"></p>
+    </div>
+
+
+
+</form>
+</body>
+</html>

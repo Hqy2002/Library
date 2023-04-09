@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>图书管理系统</title>
+  <style>
+    body {
+      font-weight: 500;
+      font-family: "Microsoft YaHei", "宋体", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
+    }
+
+    nav {
+      margin-top: 0;
+      display: flex;
+      width: 100%;
+      height: 70px;
+      border-bottom: 1px solid #000;
+
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .text {
+      margin-left: 40px;
+    }
+
+    h1 {
+      font-family: '宋体', sans-serif;
+      font-weight: 1000;
+      font-size: 23px;
+      margin-bottom: 35px;
+      margin-left: 10px;
+    }
+
+
+    .content {
+      margin-left: 200px;
+      margin-top: 100px;
+      display: flex;
+      align-content: center;
+      flex-direction: column;
+    }
+
+    input {
+
+      width: 210px;
+      height: 30px;
+      margin-right: 0;
+    }
+
+    button {
+      margin: 0;
+      padding: 0;
+
+      width: 40px;
+      height: 30px;
+    }
+    .inner {
+      float: left;
+    }
+
+    ul {
+      list-style: none;
+      font-family: '宋体', sans-serif;
+
+    }
+
+    ul li {
+      float: left;
+      width: 100px;
+
+
+    }
+
+    ul li a {
+      display: block; /*将超链接转为块儿，可以保证其霸占父亲的整行*/
+      height: 58px;
+      text-decoration: none; /*去掉超链的下划线*/
+      color: #c09090;
+      text-align: center; /*让这个div内部的文本居中*/
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+<nav>
+  <div class="logo">
+    <img src="logo.jpg" alt="Library Logo">
+  </div>
+  <div class="text">
+    <h1>图书管理系统</h1>
+  </div>
+  <div class="inner">
+    <ul>
+      <li><a href="/Library/manage" >首页</a></li>
+      <li><a href="/Library/add">添加图书</a></li>
+      <li><a href="/Library/delete">删除图书</a></li>
+      <li><a href="/Library/set">借阅管理</a></li>
+    </ul>
+  </div>
+
+</nav>
+<div class="content">
+
+  <div class="search">
+    <form action="delete" method="post">
+      <input type="text" name="bookname" placeholder="书名">
+      <button type="submit">删除</button>
+      <p th:if="${success}" >添加成功</p>
+    </form>
+  </div>
+
+</div>
+
+
+</body>
+</html>
