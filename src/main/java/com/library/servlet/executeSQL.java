@@ -10,7 +10,7 @@ public class executeSQL {
     executeSQL() throws ClassNotFoundException, SQLException {
 
            Class.forName("com.mysql.cj.jdbc.Driver");
-           conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "ZRSz2580");
+           conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/books", "root", "");
            stmt = conn.createStatement();
 
        }
